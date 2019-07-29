@@ -40,6 +40,8 @@ Caused by: java.net.UnknownHostException: d9528f35b965: Name does not resolve
 
 我是在 /etc/hostname 文件下看到了这个信息
 
+![hostname文件](https://github.com/xinput123/docs/blob/master/%E9%97%AE%E9%A2%98%E4%B8%80%E8%A7%88%E8%A1%A8/java%E7%BA%BF%E4%B8%8A%E9%97%AE%E9%A2%98/1564402551113.jpg)
+
 所以可以分析是因为系统没有找到主机名w对应的IP，只需修改Linux的hosts文件即可。
 
 <br/>
