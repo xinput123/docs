@@ -14,9 +14,9 @@
 - [centos7上安装升级docker](https://github.com/xinput123/docs/blob/master/docker/centos7%E4%B8%8A%E5%AE%89%E8%A3%85%E5%8D%87%E7%BA%A7docker.md)
 
 ## Mysql
-- [mysql常用命令](https://github.com/xinput123/docs/blob/master/mysql/1%E3%80%81mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md)
+- [mysql常用命令](https://github.com/xinput123/docs/blob/master/mysql/mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md)
 - 
-- [mysql系统函数](https://github.com/xinput123/docs/blob/master/mysql/2%E3%80%81mysql%E7%B3%BB%E7%BB%9F%E5%87%BD%E6%95%B0.md)
+- [mysql系统函数](https://github.com/xinput123/docs/blob/master/mysql/mysql%E7%B3%BB%E7%BB%9F%E5%87%BD%E6%95%B0.md)
 - 
 - [mysql好用的语句)](https://github.com/xinput123/docs/blob/master/mysql/mysql%E5%A5%BD%E7%94%A8%E7%9A%84%E8%AF%AD%E5%8F%A5.md)
 -
