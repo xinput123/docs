@@ -18,7 +18,15 @@
 - 
 - [mysql系统函数](https://github.com/xinput123/docs/blob/master/mysql/2%E3%80%81mysql%E7%B3%BB%E7%BB%9F%E5%87%BD%E6%95%B0.md)
 - 
-- [mysql 函数(个人觉得很有用的)](https://github.com/xinput123/docs/blob/master/mysql/3%E3%80%81mysql%20%E5%87%BD%E6%95%B0(%E4%B8%AA%E4%BA%BA%E8%A7%89%E5%BE%97%E5%BE%88%E6%9C%89%E7%94%A8%E7%9A%84).md)
+- [mysql好用的语句)](https://github.com/xinput123/docs/blob/master/mysql/mysql%E5%A5%BD%E7%94%A8%E7%9A%84%E8%AF%AD%E5%8F%A5.md)
+-
+- [Explain执行计划](https://github.com/xinput123/docs/blob/master/mysql/Explain.md)
+- 
+- [mysql分析日志](https://github.com/xinput123/docs/blob/master/mysql/mysql%E5%88%86%E6%9E%90%E6%97%A5%E5%BF%97.md)
+-
+- [mysql奇淫巧技](https://github.com/xinput123/docs/blob/master/mysql/mysql%E5%A5%87%E6%B7%AB%E5%B7%A7%E6%8A%80.md)
+- 
+
 
 ## Mongo
 - [MongoDB查询](https://github.com/xinput123/docs/blob/master/mongo/MongoDB%E6%9F%A5%E8%AF%A2.md)
