@@ -55,11 +55,11 @@ use naruto;
 db.createUser({"user": "stats", "pwd": "2015Sts$!","roles": [{role: "readWrite",db: "naruto"}]})
 
 -- 创建只读账号的用户
-use test  
+use test    # 选择你需要新建的数据库  
 db.createUser({user: "zjyr",pwd: "zjyr",roles: [{ role: "read", db: "test" } ]})
 
 -- 创建读写账号的用户
-use test  
+use test  # 选择你需要新建的数据库
 db.createUser({user: "zjy",pwd: "zjy",roles: [{ role: "readWrite", db: "test" }]}) 
 ```
 
