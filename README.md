@@ -22,3 +22,7 @@
 - [Mongo权限和状态](https://github.com/xinput123/docs/blob/master/mongo/mongo%E6%9D%83%E9%99%90%E5%92%8C%E7%8A%B6%E6%80%81.md)
 - [mongo查询计划](https://github.com/xinput123/docs/blob/master/mongo/mongo%E6%9F%A5%E8%AF%A2%E8%AE%A1%E5%88%92.md)
 - [Linux下自动备份Mongo](https://github.com/xinput123/docs/blob/master/mongo/Linux%E4%B8%8B%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BDMongo.md)
+
+## Nginx
+- [按天切割日志脚本](https://github.com/xinput123/docs/blob/master/Nginx/nginx%E6%97%A5%E5%BF%97%E6%8C%89%E5%A4%A9%E5%88%86%E5%89%B2.md)
+
