@@ -32,3 +32,8 @@ ps -ef | grep stats
 // 进入后台,进入名称为stats的后台
 screen -r stats 
 ```
+
+#### 4、tar 命令
+```
+
+```
