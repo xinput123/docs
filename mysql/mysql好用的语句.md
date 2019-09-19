@@ -11,6 +11,7 @@ select u.id,u.name,char_length(u.name) as nameCharLength from test_demo u where 
 - **char_length**: 不管汉字还是数字或者是字母都算是一个字符。
 
 <br/>
+
 #### 2、GROUP_CONCAT（）函数。我们在查询数据时，不但不需要对某一个字段进行分组，还要组合另外一个字段的所有值。
 ```
 select d.demoDate,d.demoContext,GROUP_CONCAT(d.stuName) from demo d group by d.demoDate ;
@@ -27,6 +28,7 @@ select d.demoDate,d.demoContext,GROUP_CONCAT(d.stuName) from demo d group by d.d
 如果最大长度被设置，结果值被剪切到这个最大长度。如果分组的字符过长，可以对系统参数进行设置：SET @@global.group_concat_max_len=40000。
 
 <br/>
+
 #### 3、对指定字段的数据进行筛选，并统计值  status=1的个数。
 ```
 select d.demoDate,
@@ -40,6 +42,7 @@ group by d.demoDate
 - sum是个很有用的函数，例如在统计某一个字段中满足条件的个数，则可以使用 sum(if(column? value1,value2))。即 column满足条件，则设置为value1，否则value2。
 
 <br/>
+
 #### 4、对于包含null值的字段排序
 order by xxx ASC排序时，字段为空值时，默认排在最前面；而为DESC排序时，字段为空值时，默认排在最后面；如果希望空值不按照默认方式来排序，该怎么处理呢？
 
@@ -49,6 +52,7 @@ order by if(isnull(xxx),1,0),xxx ASC
 - 这时候相当于先将 xxx字段中是null的和非null的进行排序，再排序xxx。
 
 <br/>
+
 #### 5、MySQL统计过去12个月的数据(包括本月)。
 ```
 SELECT 
@@ -64,6 +68,7 @@ order by month;
 - DATE_ADD(date,INTERVAL expr type) 和 DATE_SUB(date,INTERVAL expr type)这些函数执行日期运算。 date 是一个 DATETIME 或DATE值，用来指定起始时间。 expr 是一个表达式，用来指定从起始日期添加或减去的时间间隔值。  Expr是一个字符串;对于负值的时间间隔，它可以以一个 ‘-’开头。 type 为关键词，它指示了表达式被解释的方式。 
 
 <br/>
+
 #### 6、mysql两个字段的LIKE  like concat('%',字段,'%')
 ```
 select w.`药品id`
@@ -77,12 +82,14 @@ and (w.`生产厂家`=d.`厂家产地`
 ```
 
 <br/>
+
 #### 7、查询使用逗号拼接的sql
 ```
 select * from user where concat(',',owner_id,',') REGEXP ',6,';
 ```
 
 <br/>
+
 #### 8、DATE_FORMAT() 函数用于以不同的格式显示日期/时间数据。
 ```
 DATE_FORMAT(date,format) 

@@ -1,4 +1,4 @@
-# 一、普通查询
+## 一、普通查询
 #### 1、单一条件
 ```
 // 等于: senderId="5ae10bf940658909f9742684"
@@ -16,26 +16,34 @@ db.notify.find({recordState : {$gt:2} })
 // 大于或等于: recordState >= 2
 db.notify.find({recordState : {$gte:2} })
 ```
+
 <br/>
+
 #### 2、AND 条件
 ```
 // senderId="5ae10bf940658909f9742684" and notifyType="im_patient_to_doctor"
 db.notify.find({senderId:"5ae10bf940658909f9742684",notifyType:"im_patient_to_doctor"})
 ```
+
 <br/>
+
 #### 3、OR 条件
 ```
 // recordState=3 or recordState=4
 db.notify.find({$or:[ {recordState:3},{recordState:4} ] })
 ```
+
 <br/>
+
 #### 4、And 和 Or 共同使用
 ```
 // notifyType=remind_registered and (senderId="5af3ee3740658957eb6941f5" or senderId="5afa85ef40658957eb6941fc")
 db.notify.find({notifyType:"remind_registered",$or:[{senderId:"5af3ee3740658957eb6941f5"},{senderId:"5afa85ef40658957eb6941fc"}]})
 ```
+
 <br/>
-##### 5、返回指定字段(一种是返回指定的键，不反悔其他的键；一种是不反悔指定的键，返回其他键)
+
+#### 5、返回指定字段(一种是返回指定的键，不反悔其他的键；一种是不反悔指定的键，返回其他键)
 ```
 // inclusion模式 指定返回的键，不返回其他键
 db.notify.find({notifyType:"remind_registered"},{"senderId":1,by:1})
@@ -50,7 +58,8 @@ db.notify.find({notifyType:"remind_registered"},{"senderId":0})
 >- db.notify.find({notifyType:"remind_registered"},{"senderId":1,"_id":0})  可以只返回senderId而不反悔_id.
 
 <br/>
-##### 6、模糊查询
+
+#### 6、模糊查询
 ```
 // 查询 title 包含"在"字的文档
 db.notify.find({content:/在/})
@@ -64,7 +73,7 @@ db.notify.find({content:/在/})
 
 <br/>
 
-# 二、复杂查询：聚合管道 aggregate
+## 二、复杂查询：聚合管道 aggregate
 - $和字段名在一起时，需要用双引号括起来
 
 #### aggreate和sql对比
@@ -77,6 +86,7 @@ db.notify.find({content:/在/})
 - $sum COUNT()
 
 <br/>
+
 ### 1、$match  
 - 筛选条件，过滤不满足条件的文档，可使用常规查询操作符
 
@@ -87,7 +97,7 @@ db.orders.aggregate([
 ])
 ```
 
-### 2、$project  
+#### 2、$project  
 - 用于包含、排除字段，设置需查询或过滤的字段，0为过滤掉字段不显示，1为需查询的字段。
 - 用于对字段重命名
 - 投射中可使用表达式
@@ -113,6 +123,7 @@ db.users.aggregate(
 ```
 
 <br/>
+
 #### 算术表达式可对数值运算
 - $运算符 后面的[] 可以表示多个元素
 
@@ -142,7 +153,9 @@ db.users.aggregate([
   { $project: {scores: { $mod : ["$score",50]  } } }
 ])
 ```
+
 <br/>
+
 #### 字符串操作
 ```
 // $substr:[exp, startOffset, numToReturn] 字符串截取
@@ -167,6 +180,7 @@ db.users.aggregate([
 ```
 
 <br/>
+
 #### 日期表达式
 ```
 db.users.aggregate([
@@ -186,6 +200,7 @@ db.users.aggregate([
 ```
 
 <br/>
+
 ####  时间间隔
 ```
 // $cmp:[exp1, exp2] 字符串比较，相同为0，小于返回负数， 大于返回正数
@@ -200,6 +215,7 @@ db.users.aggregate([
 ```
 
 <br/>
+
 #### 逻辑条件
 ```
 // $eq 判断表达式是否相等
@@ -285,11 +301,11 @@ db.users.aggregate([
 <br/>
 
 ## 三、聚合运算 group
-### 1、group
+#### 1、group
 - 先选定分组所依据的键，而后将集合依据选定键值的不同分成若干组。然后可通过聚合每一组内的文档，产生一个结果文档。
 - group不支持分片集群，无法进行分布式运算（shard cluster）。若需要支持分布式需使用aggregate或mapReduce。
 
-##### 语法
+#### 语法
 ```
 db.collection.group(document){
   key:{key1, key2:1},
@@ -314,7 +330,8 @@ db.collection.group(document){
 
 
 <br/>
-##### 查询每个姓氏下的人数   
+
+#### 查询每个姓氏下的人数   
 - select fisrtName,count(*) from users group by fisrtName;
 
 ```
@@ -328,7 +345,7 @@ db.users.group({
 })
 ```
 
-##### 查询每个姓氏下大于18岁的人数   
+#### 查询每个姓氏下大于18岁的人数   
 - select fisrtName,count(*) from users where age>18 group by fisrtName;
 
 ```
@@ -342,7 +359,7 @@ db.users.group({
 })
 ```
 
-##### 查询每个姓氏下分数总和
+#### 查询每个姓氏下分数总和
 - select firstName,sum(score) from users where 1=1 group by fisrtName;
 
 ```
@@ -356,7 +373,7 @@ db.users.group({
 })
 ```
 
-##### 查询每个姓氏下的最高分
+#### 查询每个姓氏下的最高分
 - SELECT fisrtName,MAX(score) FROM goods GROUP BY fisrtName
 
 ```
@@ -372,7 +389,7 @@ db.users.group({
 })
 ```
 
-##### 查询每个姓氏下的平均分
+#### 查询每个姓氏下的平均分
 - SELECT fisrtName,average(price) FROM goods GROUP BY fisrtName
 
 ```
@@ -390,7 +407,7 @@ db.users.group({
 })
 ```
 
-##### 
+#### 
 
 ```
 db.notify.group({

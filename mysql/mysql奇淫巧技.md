@@ -13,12 +13,12 @@ set @rownum := 0;
 update t_insp_check set insp_sort= (@rownum:=@rownum+1) where insp_type_sort=13;
 ```
 
-##### 2、在mysql中给查询的结果添加序号
+#### 2、在mysql中给查询的结果添加序号
 ```
 Select (@i:=@i+1) as RowNum, a.* from Table1 a,(Select @i:=0) B order by a.id desc limit 0, 10;
 ```
 
-##### 3、mysql生成随机数
+#### 3、mysql生成随机数
 ```
 select ROUND(RAND()*(max-min)+min);
 ```
