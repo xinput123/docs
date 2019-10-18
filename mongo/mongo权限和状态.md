@@ -43,7 +43,7 @@ docker run --name mongo -d -p 27017:27017  --restart=always  mongo --auth
 docker exec -it mongo mongo admin 
 
 -- 添加admin权限
-db.createUser({ user: 'admin', pwd: 'admin', roles: [ { role: "root", db: "admin" } ] })  
+db.createUser({ user: 'admin', pwd: 'admin', roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] })  
 ```
 
 <br/>
