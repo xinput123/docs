@@ -13,7 +13,7 @@ curl -X GET 'http://localhost:9200/_cat/indices?v'
 ```
 - **health：** 健康状态
 - **status：** 
-- **index：** 
+- **index：** 索引名称
 - **uuid：** 
 - **pri：** 
 - **rep：** 

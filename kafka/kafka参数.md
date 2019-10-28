@@ -15,6 +15,7 @@ Kafka中的消息以主题为单位进行归纳，生产者负责将消息发送
 
 
 <br/>
+
 ## 二、$KAFKA_HOME/config/server.properties 文件
 #### 1、zookeeper.connect
 该参数指明broker要连接的Zookeeper集群的服务地址，包括端口号。可以是多个，多个之间用逗号分割 hostname1:port1,hostname2:port2,hostname3:port3
