@@ -59,7 +59,8 @@
 - [chrome关闭自动升级](https://github.com/xinput123/docs/blob/master/%E5%B7%A5%E5%85%B7/Mac/chrome%E5%85%B3%E9%97%AD%E8%87%AA%E5%8A%A8%E5%8D%87%E7%BA%A7.md)
 
 
-
+## 问题列表
+- [mongo连接问题](https://github.com/xinput123/docs/blob/master/%E9%97%AE%E9%A2%98%E4%B8%80%E8%A7%88%E8%A1%A8/mongo%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98.md)
 
 
 
