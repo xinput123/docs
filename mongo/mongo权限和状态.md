@@ -16,8 +16,8 @@ db.system.users.find()
 db.createUser({
   user:"admin",
   pwd:"admin",
-  customData:{description:"管理员用户"},
-  roles:[{role:"userAdminAnyDatabase",db:"admin"}] 
+  customData:{description:"超级管理员用户，不受访问限制的超级用户"},
+  roles:["root"] 
 })
 ```
 
@@ -42,8 +42,29 @@ docker run --name mongo -d -p 27017:27017  --restart=always  mongo --auth
 -- 进入admin
 docker exec -it mongo mongo admin 
 
--- 添加admin权限
-db.createUser({ user: 'admin', pwd: 'admin', roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] })  
+-- 添加超级管理员权限
+db.createUser({
+  user:"admin",
+  pwd:"admin",
+  customData:{description:"超级管理员用户，不受访问限制的超级用户"},
+  roles:["root"] 
+})
+
+-- 创建一个业务数据库管理员用户
+db.createUser({
+    user:"user001",
+    pwd:"123456",
+    customData:{
+        name:'jim',
+        email:'jim@qq.com',
+        age:18,
+    },
+    roles:[
+        {role:"readWrite",db:"db001"},
+        {role:"readWrite",db:"db002"},
+        'read'// 对其他数据库有只读权限，对db001、db002是读写权限
+    ]
+})
 ```
 
 <br/>
