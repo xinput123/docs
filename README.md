@@ -60,9 +60,9 @@
 
 
 ## 问题列表
-- [mongo连接问题](https://github.com/xinput123/docs/blob/master/%E9%97%AE%E9%A2%98%E4%B8%80%E8%A7%88%E8%A1%A8/mongo%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98.md)
+- [mongo连接](https://github.com/xinput123/docs/blob/master/%E9%97%AE%E9%A2%98%E4%B8%80%E8%A7%88%E8%A1%A8/mongo%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98.md)
 
-
+- [travisCi失败](https://github.com/xinput123/docs/blob/master/%E9%97%AE%E9%A2%98%E4%B8%80%E8%A7%88%E8%A1%A8/travisCi%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98.md)
 
 
 
