@@ -32,6 +32,7 @@
 - [mongo查询计划](https://github.com/xinput123/docs/blob/master/mongo/mongo%E6%9F%A5%E8%AF%A2%E8%AE%A1%E5%88%92.md)
 - [Linux下自动备份Mongo](https://github.com/xinput123/docs/blob/master/mongo/Linux%E4%B8%8B%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BDMongo.md)
 - [命令行连接远程mongo](https://github.com/xinput123/docs/blob/master/mongo/Mongo%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5.md)
+- [Mongodb更新数组操作符](https://github.com/xinput123/docs/blob/master/mongo/Mongodb%E6%9B%B4%E6%96%B0%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C%E7%AC%A6.md)
 </br>
 
 ## Nginx
