@@ -33,6 +33,9 @@ drop index indexName on talbeName;
 
 // 多列索引
 alter  table tableName  ADD  INDEX indexName( claim_number, account_file_no);
+
+// 创建唯一索引
+CREATE UNIQUE INDEX indexName on talbeName(login_name);
 ```
 
 #### 3、对datetime 字段类型的数据做修改
