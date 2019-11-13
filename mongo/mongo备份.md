@@ -31,6 +31,8 @@ mongodump -h 127.0.0.1 -p 27017 -u admin -p admin --authenticationDatabase admin
 mongorestore -h IP --port port -u 用户名 -p 密码 --authenticationDatabase 认证数据库名 -d 数据库 -c 集合 --drop /xinput/yy/person.bson  
 
 mongorestore -h 127.0.0.1 --port 27017 -u admin -p admin  --authenticationDatabase admin -d yy -c person --drop /xinput/yy/person.bson
+
+mongorestore -h 127.0.0.1 --port 27017 -u admin -p admin  --authenticationDatabase admin -d xinput --drop --dir /Users/yuanlai/mongodata/vendor
 ```
 
 - **-h** 要导出的mongo所在的主机ip地址，如果是本机，可以去掉 -h
@@ -40,7 +42,8 @@ mongorestore -h 127.0.0.1 --port 27017 -u admin -p admin  --authenticationDataba
 - **--authenticationDatabase** 指定的是验证用户名和密码的数据库
 - **-d** 目标数据库
 - **-c** 目标集合
-- **-o** 导出文件路径
+- **<path>** 备份文件的具体路径
+- **--dir** 指定备份的目录，path 和 dir 不能同时指定
 
 
 ## 四、复制数据库
