@@ -128,3 +128,16 @@ DATE_FORMAT(date,format)
 - %x	年，其中的星期一是周的第一天，4 位，与 - %v 使用
 - %Y	年，4 位
 - %y	年，2 位
+
+
+<br/>
+
+#### 9、生成随机日期
+```
+select date(from_unixtime(
+ unix_timestamp('1993-01-01') 
+ + floor(
+   rand() * ( unix_timestamp('2020-02-02') - unix_timestamp('1993-01-01') + 1 )
+ )
+)) as date;
+```
